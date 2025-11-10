@@ -1,0 +1,90 @@
+import React from "react";
+import portfolioData from "./data.json";
+
+interface ExperienceItem {
+  company: string;
+  role: string;
+  duration: string;
+  logoPath: string;
+  descriptionPoints: string[];
+}
+
+interface ExperienceData {
+  title: string;
+  list: ExperienceItem[];
+}
+
+const ExperienceCard: React.FC<ExperienceItem> = ({
+  company,
+  role,
+  duration,
+  logoPath,
+  descriptionPoints,
+}) => {
+  return (
+    <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+      <div className="flex flex-col md:flex-row justify-between mb-4">
+        <div className="flex flex-col mb-4 md:mb-0 items-start">
+          <div className="flex items-center space-x-3 mb-2">
+            <img
+              src={logoPath}
+              alt={`${company} logo`}
+              className="w-auto h-12 object-contain"
+              style={{
+                filter:
+                  "grayscale(0%) brightness(1) sepia(0%) hue-rotate(0deg) saturate(150%)",
+              }}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src =
+                  "https://placehold.co/80x20/F0FDF4/10B981?text=Logo";
+              }}
+            />
+          </div>
+          <h3 className="text-xl font-bold text-gray-900">{role}</h3>
+        </div>
+
+        <p className="text-sm font-medium text-gray-600 md:text-right">
+          {duration}
+        </p>
+      </div>
+
+      <ul className="list-disc ml-5 text-gray-700 space-y-2 text-left">
+        {descriptionPoints.map((point, index) => (
+          <li key={index} className="text-base leading-relaxed">
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const ExperienceSection: React.FC = () => {
+  const data = portfolioData.experience as ExperienceData;
+
+  return (
+    <section
+      id="experience"
+      className="container mx-auto px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center"
+    >
+      <div className="max-w-full w-full text-center">
+        <div className="mb-8">
+          <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 bg-gray-200 rounded-full shadow-inner">
+            Experience
+          </span>
+        </div>
+        <h2 className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 mb-12">
+          {data.title}
+        </h2>
+        <div className="space-y-8">
+          {data.list.map((item, index) => (
+            <ExperienceCard key={index} {...item} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExperienceSection;

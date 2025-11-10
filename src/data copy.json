@@ -1,0 +1,146 @@
+{
+    "navLinks": [
+      { "name": "About", "href": "#about" },
+      { "name": "Skills", "href": "#skills" },
+      { "name": "Experience", "href": "#experience" },
+      { "name": "Work", "href": "#work" },
+      { "name": "Contact", "href": "#contact" }
+    ],
+    "home": {
+      "greeting": "Hi, I'm",
+      "name": "Gagan",
+      "description": "I'm a full stack developer (React.js & Node.js) with a focus on creating (and occasionally designing) exceptional digital experiences that are fast, accessible, visually appealing, and responsive. Even though I have been creating web applications for over 7 years, I still love it as if it was something new.",
+      "statusColor": "bg-green-500",
+      "location": "Bengaluru, India",
+      "status": "Available for hire",
+      "profileImagePath": "https://placehold.co/300x400/374151/FFFFFF?text=Gagan+Profile",
+      "socials": [
+        { "iconKey": "GithubOutlined", "href": "https://github.com/yourusername", "label": "GitHub", "color": "hover:text-gray-900" },
+        { "iconKey": "TwitterOutlined", "href": "https://twitter.com/yourusername", "label": "Twitter", "color": "hover:text-blue-500" },
+        { "iconKey": "LinkedinOutlined", "href": "https://linkedin.com/in/yourusername", "label": "LinkedIn", "color": "hover:text-blue-700" },
+        { "iconKey": "MediumOutlined", "href": "https://medium.com/@yourusername", "label": "Medium", "color": "hover:text-gray-900" }
+      ]
+    },
+    "about": {
+      "badge": "About me",
+      "title": "Curious about me? Here you have it:",
+      "imagePath": "https://placehold.co/400x500/374151/FFFFFF?text=Gagan+Profile",
+      "paragraphs": [
+        "I'm a passionate, **self-proclaimed designer** who specializes in full stack development (**React.js & Node.js**). I am very enthusiastic about bringing the technical and visual aspects of digital products to life. User experience, pixel perfect design, and writing clear, readable, highly performant code matters to me.",
+        "I began my journey as a web developer in **2015**, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way. Now, in my thirties, 7 years after starting my web development journey, I'm building cutting-edge web applications using modern technologies such as Next.js, TypeScript, Nest.js, Tailwindcss, Supabase and much more.",
+        "I am very much a **progressive thinker** and enjoy working on products end to end, from ideation all the way to development.",
+        "When I'm not in full-on developer mode, you can find me hovering around on twitter or on indie hacker, witnessing the journey of early startups or enjoying some free time. You can follow me on **Twitter** where I share tech-related bites and build in public, or you can follow me on **GitHub**."
+      ],
+      "quickBitsTitle": "Finally, some quick bits about me.",
+      "quickBits": [
+        "B.E. in Computer Engineering",
+        "Avid learner",
+        "Full time freelancer",
+        "Aspiring indie hacker"
+      ],
+      "closingText": "One last thing, I'm **available for freelance work**, so feel free to reach out and say hello! I promise I don't bite 😉"
+    },
+    "skills": {
+      "title": "The skills, tools and technologies I am really good at:",
+      "list": [
+        { "name": "Javascript", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
+        { "name": "Typescript", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
+        { "name": "React", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+        { "name": "Next.js", "iconPath": "https://assets.vercel.com/image/upload/v1679038290/nextjs/Icon_light/nextjs-icon-light.svg" },
+        { "name": "Node.js", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
+        { "name": "Express.js", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" },
+        { "name": "Nest.js", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/9/98/NestJS_logo.svg" },
+        { "name": "Socket.io", "iconPath": "https://socket.io/images/logo.svg" },
+        { "name": "PostgreSQL", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_logo.svg" },
+        { "name": "MongoDB", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" },
+        { "name": "Sass/Scss", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_logo.svg" },
+        { "name": "Tailwindcss", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+        { "name": "Figma", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
+        { "name": "Cypress", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/1/18/Cypress.io_logo_small.svg" },
+        { "name": "Storybook", "iconPath": "https://seeklogo.com/images/S/storybook-logo-10CDAB2AE5-seeklogo.com.png" },
+        { "name": "Git", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" }
+      ]
+    },
+    "experience": {
+      "title": "Here is a quick summary of my most recent experiences:",
+      "list": [
+        {
+          "company": "Upwork",
+          "role": "Sr. Frontend Developer",
+          "duration": "Nov 2021 - Present",
+          "logoPath": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Upwork_logo.svg/500px-Upwork_logo.svg.png",
+          "descriptionPoints": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Ut pretium arcu et massa semper, id fringilla leo semper.",
+            "Sed quis justo ac magna.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        },
+        {
+          "company": "Upwork",
+          "role": "Team Lead",
+          "duration": "Jul 2017 - Oct 2021",
+          "logoPath": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Upwork_logo.svg/500px-Upwork_logo.svg.png",
+          "descriptionPoints": [
+            "Sed quis justo ac magna.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Sed quis justo ac magna.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        },
+        {
+          "company": "Upwork",
+          "role": "Full Stack Developer",
+          "duration": "Dec 2015 - May 2017",
+          "logoPath": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Upwork_logo.svg/500px-Upwork_logo.svg.png",
+          "descriptionPoints": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Some of the noteworthy projects I have built:",
+      "list": [
+        {
+          "title": "Fiskil",
+          "description": "Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+          "imagePath": "https://placehold.co/600x400/374151/FFFFFF?text=Fiskil+Project",
+          "technologies": ["React", "Next.js", "Typescript", "Nest.js", "PostgreSQL", "Tailwindcss", "Figma", "Cypress", "Storybook", "Git"],
+          "projectLink": "https://github.com/yourusername/fiskil",
+          "liveLink": "https://fiskil.com"
+        },
+        {
+          "title": "Another Project",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+          "imagePath": "https://placehold.co/600x400/5C6BC0/FFFFFF?text=Another+Project",
+          "technologies": ["React", "Node.js", "MongoDB", "Express.js", "Sass/Scss"],
+          "projectLink": "https://github.com/yourusername/another-project",
+          "liveLink": "https://anotherproject.com"
+        },
+        {
+          "title": "Third Project",
+          "description": "Sed quis justo ac magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium arcu et massa semper, id fringilla leo semper.",
+          "imagePath": "https://placehold.co/600x400/9CCC65/FFFFFF?text=Third+Project",
+          "technologies": ["Vue.js", "Firebase", "Tailwindcss"],
+          "projectLink": "https://github.com/yourusername/third-project",
+          "liveLink": "https://thirdproject.com"
+        }
+      ]
+    },
+    "contact": {
+      "badge": "Get in touch",
+      "description": "What's next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.",
+      "email": "reachsagaremail@gmail.com",
+      "phone": "+91 8980500565",
+      "socialsText": "You may also find me on these platforms!",
+      "socials": [
+        { "iconKey": "GithubOutlined", "href": "https://github.com/yourusername", "label": "GitHub", "color": "hover:text-gray-900" },
+        { "iconKey": "TwitterOutlined", "href": "https://twitter.com/yourusername", "label": "Twitter", "color": "hover:text-blue-500" },
+        { "iconKey": "LinkedinOutlined", "href": "https://linkedin.com/in/yourusername", "label": "LinkedIn", "color": "hover:text-blue-700" },
+        { "iconKey": "MediumOutlined", "href": "https://medium.com/@yourusername", "label": "Medium", "color": "hover:text-gray-900" }
+      ]
+    },
+    "cvPath": "/path/to/your/cv.pdf"
+  }

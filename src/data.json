@@ -1,0 +1,140 @@
+{
+    "navLinks": [
+      { "name": "About", "href": "#about" },
+      { "name": "Skills", "href": "#skills" },
+      { "name": "Experience", "href": "#experience" },
+      { "name": "Work", "href": "#work" },
+      { "name": "Contact", "href": "#contact" }
+    ],
+    "home": {
+      "logoname": "Gagan",
+      "greeting": "Hi, I'm",
+      "name": "Gagan Gupta",
+      "description": "I'm a Front-end Developer with experience building scalable, user-friendly web apps using React, Ant Design, Tailwind CSS, and Vite. I love creating reusable components, dynamic form engines, and optimizing performance for large-scale applications. My focus is on writing clean, maintainable code and delivering delightful user experiences.",
+      "statusColor": "bg-green-500",
+      "location": null,
+      "status": null,
+      "profileImagePath": "https://media.licdn.com/dms/image/v2/D4D03AQHXADKwu3DYAw/profile-displayphoto-shrink_800_800/B4DZP6DVYsHYAg-/0/1735067001468?e=1763596800&v=beta&t=ghNLtIHM9HEg-Kx2YoPHNgmLxjLngr6aQ8utzoCPcKQ",
+      "socials": [
+        { "iconKey": "LinkedinOutlined", "href": "https://www.linkedin.com/in/gagangupta06", "label": "LinkedIn", "color": "hover:text-blue-700" }
+      ]
+    },
+    "about": {
+      "badge": "About me",
+      "title": "Curious about me? Here’s a bit about who I am:",
+      
+      "paragraphs": [
+        "I'm a passionate front-end developer who enjoys bringing modern, scalable, and visually engaging web interfaces to life using React, TypeScript, and Tailwind CSS.",
+        "Since beginning my web development journey in college, I’ve worked on projects across startups and enterprises — learning to balance performance, maintainability, and design precision.",
+        "I’ve contributed to building systems like Loan Origination and Loan Management platforms, form engines, and reusable UI component libraries that enhance team productivity.",
+        "When I’m not coding, you’ll find me exploring new design ideas, experimenting with front-end tools, or listening to music."
+      ],
+      "quickBitsTitle": "Some quick bits about me:",
+      "quickBits": [
+        "B.Tech in Computer Science and Engineering from VIT",
+        "Front-end Developer at Saison Omni",
+        "Avid learner and tech enthusiast",
+        "Love building responsive, scalable UIs"
+      ],
+      "closingText": "I’m always open to discussing new opportunities or collaborations. Feel free to reach out — I’d love to connect! 🚀"
+    },
+    "skills": {
+      "title": "Skills, tools and technologies I work with:",
+      "list": [
+        { "name": "JavaScript (ES6+)", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
+        { "name": "TypeScript", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
+        { "name": "React", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+        { "name": "Ant Design", "iconPath": "https://statamic.com/images/storage/products/TPREmXDmozTQJQSA6Xg0f20sy0stXf2ckzVUcvHx.png?fit=max&w=1280MU" },
+        { "name": "Tailwind CSS", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+        { "name": "Vite", "iconPath": "https://vitejs.dev/logo.svg" },
+        { "name": "HTML", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" },
+        { "name": "CSS", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" },
+        { "name": "Java", "iconPath": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" },
+        { "name": "GitHub", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" },
+        { "name": "Figma", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
+        { "name": "Nx", "iconPath": "https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" },
+        { "name": "Bootstrap", "iconPath": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" },
+        { "name": "Chart.js", "iconPath": "https://www.chartjs.org/media/logo-title.svg" }
+      ]
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "list": [
+        {
+          "company": "Saison Omni",
+          "role": "Software Engineer 1",
+          "duration": "Dec 2025 – Present",
+          "logoPath": "data:image/jpeg;base64,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",
+          "descriptionPoints": [
+            "Built Loan Origination System (LOS) and Loan Management System (LMS) using React, Ant Design, Vite, Tailwind CSS, and RTK Query — resulting in an 80% increase in monthly loan disbursements for clients.",
+            "Developed a dynamic, config-driven form engine in React supporting 500+ fields using JSON schema validation (AJV) and registry-driven architecture.",
+            "Spearheaded creation of a reusable UI component library with 60+ components, standardizing design and reducing delivery timelines."
+          ]
+        },
+        {
+          "company": "Saison Omni",
+          "role": "Software Developer Intern",
+          "duration": "Jun 2024 – Dec 2024",
+          "logoPath": "data:image/jpeg;base64,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",
+          "descriptionPoints": [
+            "Contributed to Omni UI and Marvin — a co-lending platform enabling collaboration between banks and NBFCs.",
+            "Built LMS Config, LOS Config, and Rules Management modules using Ant Design and i18next.",
+            "Improved code quality and performance by resolving linting issues and implementing front-end best practices."
+          ]
+        },
+        {
+          "company": "Adani Enterprises",
+          "role": "Web Development Intern",
+          "duration": "Jul 2023 – Aug 2023",
+          "logoPath": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVpc_IPK-otJrg49Tgk-nA5-cd8I7DHVrv9A&s",
+          "descriptionPoints": [
+            "Developed an efficient feedback mechanism improving internal communication between Chairman and employees.",
+            "Created dual style sheets using CSS and SCSS for consistent and maintainable design.",
+            "Enhanced user experience and responsive design for internal websites."
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Personal Projects",
+      "list": [
+        {
+          "title": "Optron Industries",
+          "description": "Built a responsive company website for Optron Industries to showcase products and boost brand visibility.",
+          "imagePath": "https://placehold.co/600x400/374151/FFFFFF?text=Optron+Industries",
+          "technologies": ["React", "Tailwind CSS", "JavaScript"],
+          "liveLink": "https://www.optronindustries.com/"
+        },
+        {
+          "title": "Onelnflu",
+          "description": "Developed a responsive influencer marketing platform enabling brands to connect and collaborate with creators.",
+          "imagePath": "https://placehold.co/600x400/5C6BC0/FFFFFF?text=Onelnflu",
+          "technologies": ["React", "Tailwind CSS", "Ant Design"],
+          "liveLink": "https://oneinflu.com/"
+        },
+        {
+          "title": "NorthStar Academy",
+          "description": "Developed a responsive educational website to promote CMA (USA) programs and drive lead conversions.",
+          "imagePath": "https://placehold.co/600x400/9CCC65/FFFFFF?text=NorthStar+Academy",
+          "technologies": ["React", "Tailwind CSS", "Vite"],
+          "liveLink": "https://northstartest.netlify.app/"
+        },
+        {
+          "title": "SIBA Global",
+          "description": "Built a website for the South Indian Business Awards to showcase events and highlight South India's business excellence.",
+          "imagePath": "https://placehold.co/600x400/FF7043/FFFFFF?text=SIBA+Global",
+          "technologies": ["React", "Tailwind CSS", "PHP"],
+          "liveLink": "http://siba.global/"
+        }
+      ]
+    },
+    "contact": {
+      "badge": "Get in touch",
+      "description": "Interested in working together or have a project in mind? Feel free to reach out to me — I’d love to collaborate!",
+      "email": "gupta.gagan2002@gmail.com",
+      "phone": "+91 8247555493",
+      "socialsText": "You can also find me on these platforms:"
+    },
+    "cvPath": "https://drive.google.com/file/d/1Ak_3x6kxJtvfAulUNkbCt60iwgA7SCXV/view?usp=sharing"
+  }
+  
