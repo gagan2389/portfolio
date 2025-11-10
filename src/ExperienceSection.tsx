@@ -24,7 +24,7 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
 }) => {
   return (
     <motion.div 
-      className="bg-white p-6 md:p-8 rounded-xl shadow-lg"
+      className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -49,16 +49,16 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
               }}
             />
           </div>
-          <h3 className="text-xl font-bold text-gray-900">{role}</h3>
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white">{role}</h3>
         </div>
 
-        <p className="text-sm font-medium text-gray-600 md:text-right">
+        <p className="text-sm font-medium text-gray-600 dark:text-gray-400 md:text-right">
           {duration}
         </p>
       </div>
 
       <motion.ul 
-        className="list-disc ml-5 text-gray-700 space-y-2 text-left"
+        className="list-disc ml-5 text-gray-700 dark:text-gray-300 space-y-2 text-left"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -104,12 +104,12 @@ const ExperienceSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 bg-gray-200 rounded-full shadow-inner">
+          <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 dark:text-gray-200 bg-gray-200 dark:bg-gray-700 rounded-full shadow-inner">
             Experience
           </span>
         </motion.div>
         <motion.h2 
-          className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 mb-6"
+          className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 dark:text-gray-300 mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

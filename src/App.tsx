@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from './ThemeContext';
 import Navbar from './Navbar';
 import HomeSection from './HomeSection';
 import AboutSection from './AboutSection';
@@ -9,7 +10,7 @@ import ContactSection from './ContactSection';
 
 const App: React.FC = () => {
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
       <HomeSection />
       <AboutSection />
@@ -17,7 +18,7 @@ const App: React.FC = () => {
       <ExperienceSection />
       <WorkSection />
       <ContactSection />
-      </>
+    </ThemeProvider>
   );
 };
 

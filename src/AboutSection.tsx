@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full shadow-inner">
+        <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 rounded-full shadow-inner">
           About me
         </span>
       </motion.div>
@@ -76,7 +76,7 @@ const AboutSection: React.FC = () => {
         >
           {data.title && (
             <motion.h2 
-              className="text-4xl font-bold tracking-tight text-gray-900 mb-6"
+              className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -91,7 +91,7 @@ const AboutSection: React.FC = () => {
               {data.paragraphs.map((paragraph, index) => (
                 <motion.p 
                   key={index} 
-                  className="text-gray-700 mb-6 leading-relaxed"
+                  className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -105,7 +105,7 @@ const AboutSection: React.FC = () => {
 
           {data.quickBitsTitle && (
             <motion.h3 
-              className="text-xl font-semibold text-gray-900 mb-3"
+              className="text-xl font-semibold text-gray-900 dark:text-white mb-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -116,7 +116,7 @@ const AboutSection: React.FC = () => {
           )}
           {data.quickBits && data.quickBits.length > 0 && (
             <motion.ul 
-              className="text-gray-700 list-disc list-inside space-y-1 ml-4 grid grid-cols-1 sm:grid-cols-2"
+              className="text-gray-700 dark:text-gray-300 list-disc list-inside space-y-1 ml-4 grid grid-cols-1 sm:grid-cols-2"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -138,7 +138,7 @@ const AboutSection: React.FC = () => {
 
           {data.closingText && (
             <motion.p 
-              className="text-gray-700 mt-6 leading-relaxed"
+              className="text-gray-700 dark:text-gray-300 mt-6 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
