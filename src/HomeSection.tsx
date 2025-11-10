@@ -36,7 +36,7 @@ const HomeSection: React.FC = () => {
   const EnvironmentIcon = IconMap.EnvironmentOutlined;
 
   return (
-    <section id="home" className="container mx-auto px-4 py-8 md:py-12 lg:py-16 flex flex-col md:flex-row items-center justify-between gap-12 pt-20">
+    <section id="home" className="container mx-auto px-4 py-8 md:py-12 lg:py-16 flex flex-col md:flex-row items-center justify-between gap-12 pt-20 !mt-10">
       <motion.div 
         className="flex-1 text-center md:text-left order-2 md:order-1"
         initial={{ opacity: 0, y: 30 }}

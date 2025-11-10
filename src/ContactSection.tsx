@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
             <Icon className="text-lg sm:text-xl md:text-2xl text-gray-600 flex-shrink-0" />
             <a 
                 href={`${linkPrefix}:${value}`} 
-                className="text-[14px] !sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 hover:text-blue-600 transition duration-150 break-all sm:break-normal"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-900 hover:text-blue-600 transition duration-150 break-all sm:break-normal"
             >
                 {value}
             </a>
