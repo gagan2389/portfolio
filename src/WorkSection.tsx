@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
 
     return (
         <motion.div 
-            className="bg-white rounded-xl shadow-lg overflow-hidden"
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -57,8 +57,8 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
                 </motion.div>
 
                 <div className={`w-full md:w-1/2 flex flex-col justify-center ${textOrderClass}`}>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-                    <p className="text-gray-700 text-left mb-4">{description}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">{title}</h3>
+                    <p className="text-gray-700 dark:text-gray-300 text-left mb-4">{description}</p>
                     
                     <motion.div 
                         className="flex flex-wrap gap-2 mb-4"
@@ -76,7 +76,7 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
                         {technologies.map((tech, techIndex) => (
                             <motion.span 
                                 key={techIndex} 
-                                className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full"
+                                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full"
                                 variants={{
                                     hidden: { opacity: 0, scale: 0.8 },
                                     visible: { opacity: 1, scale: 1 }
@@ -94,7 +94,7 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
                                 href={projectLink} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="text-blue-600 hover:text-blue-800 transition duration-150 flex items-center space-x-1"
+                                className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition duration-150 flex items-center space-x-1"
                                 aria-label={`View ${title} on GitHub`}
                                 whileHover={{ scale: 1.1, x: 5 }}
                                 whileTap={{ scale: 0.95 }}
@@ -108,7 +108,7 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
                                 href={liveLink} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="text-blue-600 hover:text-blue-800 transition duration-150 flex items-center space-x-1"
+                                className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition duration-150 flex items-center space-x-1"
                                 aria-label={`View live demo of ${title}`}
                                 whileHover={{ scale: 1.1, x: 5 }}
                                 whileTap={{ scale: 0.95 }}
@@ -137,13 +137,13 @@ const WorkSection: React.FC = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 bg-gray-200 rounded-full shadow-inner">
+                    <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 dark:text-gray-200 bg-gray-200 dark:bg-gray-700 rounded-full shadow-inner">
                         Personal Projects
                     </span>
                 </motion.div>
 
                 <motion.h2 
-                    className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 mb-6"
+                    className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 dark:text-gray-300 mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}

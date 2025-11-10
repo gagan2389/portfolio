@@ -45,7 +45,7 @@ const HomeSection: React.FC = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <motion.h1 
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight mb-3 sm:mb-4"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white leading-tight mb-3 sm:mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -54,7 +54,7 @@ const HomeSection: React.FC = () => {
           {data.greeting} {data.name}
         </motion.h1>
         <motion.p 
-          className="text-base md:text-lg text-gray-700 max-w-xl mb-6"
+          className="text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-xl mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -72,13 +72,13 @@ const HomeSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           {data.location && (
-            <div className="flex items-center text-gray-700 text-base">
-              <EnvironmentIcon className="text-gray-500 mr-2" />
+            <div className="flex items-center text-gray-700 dark:text-gray-300 text-base">
+              <EnvironmentIcon className="text-gray-500 dark:text-gray-400 mr-2" />
               {data.location}
             </div>
           )}
           {data.status && (
-            <div className="flex items-center text-gray-700 text-base">
+            <div className="flex items-center text-gray-700 dark:text-gray-300 text-base">
               <span className={`w-2.5 h-2.5 ${data.statusColor} rounded-full mr-2`}></span>
               {data.status}
             </div>
@@ -95,6 +95,11 @@ const HomeSection: React.FC = () => {
         >
           {data.socials.map((social, index) => {
             const IconComponent = IconMap[social.iconKey as IconKey];
+            
+            // Make LinkedIn and GitHub white in dark mode
+            const isLinkedInOrGitHub = social.iconKey === 'LinkedinOutlined' || social.iconKey === 'GithubOutlined';
+            const darkModeClass = isLinkedInOrGitHub ? 'dark:text-white' : '';
+            
             return (
               <motion.a 
                 key={social.label} 
@@ -109,7 +114,7 @@ const HomeSection: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
               >
-                <IconComponent className={`text-3xl ${social.color} transition-colors`} />
+                <IconComponent className={`text-3xl ${social.color} ${darkModeClass} transition-colors`} />
               </motion.a>
             );
           })}
@@ -124,7 +129,7 @@ const HomeSection: React.FC = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
       >
         <motion.div 
-          className="absolute inset-0 bg-gray-200 rounded-lg transform translate-x-4 translate-y-4 -z-10 hidden md:block"
+          className="absolute inset-0 bg-gray-200 dark:bg-gray-700 rounded-lg transform translate-x-4 translate-y-4 -z-10 hidden md:block"
           initial={{ opacity: 0, x: 0, y: 0 }}
           whileInView={{ opacity: 1, x: 16, y: 16 }}
           viewport={{ once: true }}
