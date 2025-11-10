@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExportOutlined } from '@ant-design/icons';
+import { motion } from 'motion/react';
 import portfolioData from "./data.json";
 
 interface ProjectItem {
@@ -30,9 +31,20 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
     const textOrderClass = isEven ? "order-2" : "order-2 md:order-1";
 
     return (
-        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden">
+        <motion.div 
+            className="bg-white rounded-xl shadow-lg overflow-hidden"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+        >
             <div className="flex flex-col md:flex-row gap-6 p-6 md:p-8">
-                <div className={`w-full md:w-1/2 flex-shrink-0 ${imageOrderClass}`}>
+                <motion.div 
+                    className={`w-full md:w-1/2 flex-shrink-0 ${imageOrderClass}`}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                >
                     <img 
                         src={imagePath} 
                         alt={`${title} project screenshot`} 
@@ -42,52 +54,73 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
                             target.src = "https://placehold.co/600x400/E5E7EB/6B7280?text=Project+Image";
                         }}
                     />
-                </div>
+                </motion.div>
 
                 <div className={`w-full md:w-1/2 flex flex-col justify-center ${textOrderClass}`}>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
                     <p className="text-gray-700 leading-relaxed mb-4">{description}</p>
                     
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <motion.div 
+                        className="flex flex-wrap gap-2 mb-4"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            visible: {
+                                transition: {
+                                    staggerChildren: 0.05
+                                }
+                            }
+                        }}
+                    >
                         {technologies.map((tech, techIndex) => (
-                            <span 
+                            <motion.span 
                                 key={techIndex} 
                                 className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full"
+                                variants={{
+                                    hidden: { opacity: 0, scale: 0.8 },
+                                    visible: { opacity: 1, scale: 1 }
+                                }}
+                                whileHover={{ scale: 1.1 }}
                             >
                                 {tech}
-                            </span>
+                            </motion.span>
                         ))}
-                    </div>
+                    </motion.div>
 
                     <div className="flex items-center space-x-4">
                         {projectLink && (
-                            <a 
+                            <motion.a 
                                 href={projectLink} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className="text-blue-600 hover:text-blue-800 transition duration-150 flex items-center space-x-1"
                                 aria-label={`View ${title} on GitHub`}
+                                whileHover={{ scale: 1.1, x: 5 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <ExportOutlined />
                                 <span>Code</span>
-                            </a>
+                            </motion.a>
                         )}
                         {liveLink && (
-                            <a 
+                            <motion.a 
                                 href={liveLink} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className="text-blue-600 hover:text-blue-800 transition duration-150 flex items-center space-x-1"
                                 aria-label={`View live demo of ${title}`}
+                                whileHover={{ scale: 1.1, x: 5 }}
+                                whileTap={{ scale: 0.95 }}
                             >
                                 <ExportOutlined />
                                 <span>Live Demo</span>
-                            </a>
+                            </motion.a>
                         )}
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
@@ -95,19 +128,43 @@ const WorkSection: React.FC = () => {
     const data = portfolioData.projects as ProjectsData;
 
     return (
-        <section id="work" className="container mx-auto px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center">
+        <section id="work" className="container mx-auto px-4 py-8 md:py-12 lg:py-16 flex flex-col items-center">
             <div className="max-w-5xl w-full text-center">
-                <div className="mb-8">
+                <motion.div 
+                    className="mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 bg-gray-200 rounded-full shadow-inner">
                         Personal Projects
                     </span>
-                </div>
+                </motion.div>
 
-                <h2 className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 mb-12">
+                <motion.h2 
+                    className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 mb-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
                     {data.title}
-                </h2>
+                </motion.h2>
                 
-                <div className="space-y-12">
+                <motion.div 
+                    className="space-y-6"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={{
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.2
+                            }
+                        }
+                    }}
+                >
                     {data.list.map((project, index) => (
                         <ProjectCard 
                             key={index}
@@ -115,7 +172,7 @@ const WorkSection: React.FC = () => {
                             index={index}
                         />
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

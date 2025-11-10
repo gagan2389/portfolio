@@ -1,6 +1,7 @@
 import React from 'react';
 import { MailOutlined, PhoneOutlined, CopyOutlined, GithubOutlined, TwitterOutlined, LinkedinOutlined, MediumOutlined } from "@ant-design/icons";
 import { message } from 'antd';
+import { motion } from 'motion/react';
 import portfolioData from "./data.json";
 
 const IconMap = {
@@ -62,41 +63,76 @@ const ContactSection: React.FC = () => {
             <div id="contact" className="container mx-auto px-2 py-6 md:py-8 lg:py-10 flex flex-col items-center">
                 <div className="max-w-2xl w-full text-center">
                     
-                    <div className="mb-6 md:mb-8">
+                    <motion.div 
+                        className="mb-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <span className="inline-block px-4 py-1.5 text-xs sm:text-sm font-semibold text-gray-800 bg-gray-100 rounded-full shadow-sm">
                             {data.badge}
                         </span>
-                    </div>
+                    </motion.div>
 
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 md:mb-4 px-4">
+                    <motion.p 
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 md:mb-4 px-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         {data.description}
-                    </p>
+                    </motion.p>
 
-                    <div className="mb-8">
+                    <motion.div 
+                        className="mb-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
                         {renderContactDetail(MailOutlined, data.email, 'mailto', 'Email')}
                         {renderContactDetail(PhoneOutlined, data.phone, 'tel', 'Phone')}
-                    </div>
+                    </motion.div>
 
 
-                    <div className="flex justify-center space-x-4 md:space-x-6 text-gray-600 mb-8">
+                    <motion.div 
+                        className="flex justify-center space-x-4 md:space-x-6 text-gray-600 mb-8"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            visible: {
+                                transition: {
+                                    staggerChildren: 0.1
+                                }
+                            }
+                        }}
+                    >
                         {allSocials.map((social) => {
                             const IconComponent = IconMap[social.iconKey as IconKey];
                             if (!IconComponent) return null; 
                             
                             return (
-                                <a 
+                                <motion.a 
                                     key={social.label} 
                                     href={social.href} 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     aria-label={social.label}
-                                    className="hover:scale-110 transition-transform duration-200"
+                                    variants={{
+                                        hidden: { opacity: 0, scale: 0.5, y: 20 },
+                                        visible: { opacity: 1, scale: 1, y: 0 }
+                                    }}
+                                    whileHover={{ scale: 1.2, y: -5, rotate: 5 }}
+                                    whileTap={{ scale: 0.9 }}
                                 >
                                     <IconComponent className={`text-2xl md:text-3xl lg:text-4xl ${social.color} transition-colors hover:opacity-80`} />
-                                </a>
+                                </motion.a>
                             );
                         })}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </footer>

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'motion/react';
 import portfolioData from "./data.json";
 
 interface ExperienceItem {
@@ -22,7 +23,14 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
   descriptionPoints,
 }) => {
   return (
-    <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+    <motion.div 
+      className="bg-white p-6 md:p-8 rounded-xl shadow-lg"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+    >
       <div className="flex flex-col md:flex-row justify-between mb-4">
         <div className="flex flex-col mb-4 md:mb-0 items-start">
           <div className="flex items-center space-x-3 mb-2">
@@ -49,14 +57,34 @@ const ExperienceCard: React.FC<ExperienceItem> = ({
         </p>
       </div>
 
-      <ul className="list-disc ml-5 text-gray-700 space-y-2 text-left">
+      <motion.ul 
+        className="list-disc ml-5 text-gray-700 space-y-2 text-left"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.1
+            }
+          }
+        }}
+      >
         {descriptionPoints.map((point, index) => (
-          <li key={index} className="text-base leading-relaxed">
+          <motion.li 
+            key={index} 
+            className="text-base leading-relaxed"
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: { opacity: 1, x: 0 }
+            }}
+            transition={{ duration: 0.4 }}
+          >
             {point}
-          </li>
+          </motion.li>
         ))}
-      </ul>
-    </div>
+      </motion.ul>
+    </motion.div>
   );
 };
 
@@ -66,22 +94,46 @@ const ExperienceSection: React.FC = () => {
   return (
     <section
       id="experience"
-      className="container mx-auto px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center"
+      className="container mx-auto px-4 py-8 md:py-12 lg:py-16 flex flex-col items-center"
     >
       <div className="max-w-full w-full text-center">
-        <div className="mb-8">
+        <motion.div 
+          className="mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 bg-gray-200 rounded-full shadow-inner">
             Experience
           </span>
-        </div>
-        <h2 className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 mb-12">
+        </motion.div>
+        <motion.h2 
+          className="text-xl md:text-2xl font-medium tracking-tight text-gray-700 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           {data.title}
-        </h2>
-        <div className="space-y-8">
+        </motion.h2>
+        <motion.div 
+          className="space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+        >
           {data.list.map((item, index) => (
             <ExperienceCard key={index} {...item} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
