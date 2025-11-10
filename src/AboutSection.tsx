@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'motion/react';
 import portfolioData from "./data.json";
 
 interface aboutData {
@@ -30,18 +31,29 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="container mx-auto px-4 py-16 md:py-24 lg:py-32 flex flex-col items-center"
+      className="container mx-auto px-4 py-8 md:py-12 lg:py-16 flex flex-col items-center"
     >
-      <div className="mb-8">
+      <motion.div 
+        className="mb-4"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <span className="inline-block px-4 py-1 text-sm font-semibold text-gray-800 bg-gray-100 rounded-full shadow-inner">
           About me
         </span>
-      </div>
+      </motion.div>
       <div className="flex flex-col md:flex-row max-w-6xl w-full gap-12">
         {data?.imagePath && (
-          <div className="flex relative w-full max-w-sm mx-auto md:w-1/3 order-2 md:order-1">
-            {/* <div className="absolute inset-0 bg-gray-200 rounded-lg transform translate-x-4 translate-y-4 -z-10 hidden lg:block"></div> */}
-            <img
+          <motion.div 
+            className="flex relative w-full max-w-sm mx-auto md:w-1/3 order-2 md:order-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <motion.img
               src={data?.imagePath}
               alt="Profile"
               className="w-full h-auto rounded-lg relative z-10"
@@ -50,45 +62,92 @@ const AboutSection: React.FC = () => {
                 target.src =
                   "https://placehold.co/400x500/374151/FFFFFF?text=Profile+Image";
               }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             />
-          </div>
+          </motion.div>
         )}
-        <div className="flex-1 order-1 md:order-2">
+        <motion.div 
+          className="flex-1 order-1 md:order-2"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
           {data.title && (
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 mb-6">
+            <motion.h2 
+              className="text-4xl font-bold tracking-tight text-gray-900 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               {data.title}
-            </h2>
+            </motion.h2>
           )}
 
           {data.paragraphs && data.paragraphs.length > 0 && (
             <>
               {data.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-gray-700 mb-6 leading-relaxed">
+                <motion.p 
+                  key={index} 
+                  className="text-gray-700 mb-6 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                >
                   {renderText(paragraph)}
-                </p>
+                </motion.p>
               ))}
             </>
           )}
 
           {data.quickBitsTitle && (
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+            <motion.h3 
+              className="text-xl font-semibold text-gray-900 mb-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               {renderText(data.quickBitsTitle)}
-            </h3>
+            </motion.h3>
           )}
           {data.quickBits && data.quickBits.length > 0 && (
-            <ul className="text-gray-700 list-disc list-inside space-y-1 ml-4 grid grid-cols-1 sm:grid-cols-2">
+            <motion.ul 
+              className="text-gray-700 list-disc list-inside space-y-1 ml-4 grid grid-cols-1 sm:grid-cols-2"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+            >
               {data.quickBits.map((bit, index) => (
-                <li key={index}>{bit}</li>
+                <motion.li 
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.8 + index * 0.05 }}
+                >
+                  {bit}
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
           )}
 
           {data.closingText && (
-            <p className="text-gray-700 mt-6 leading-relaxed">
+            <motion.p 
+              className="text-gray-700 mt-6 leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+            >
               {renderText(data.closingText)}
-            </p>
+            </motion.p>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
