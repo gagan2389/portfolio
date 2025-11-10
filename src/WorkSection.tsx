@@ -58,7 +58,7 @@ const ProjectCard: React.FC<ProjectItem & { index: number }> = ({
 
                 <div className={`w-full md:w-1/2 flex flex-col justify-center ${textOrderClass}`}>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
-                    <p className="text-gray-700 leading-relaxed mb-4">{description}</p>
+                    <p className="text-gray-700 text-left mb-4">{description}</p>
                     
                     <motion.div 
                         className="flex flex-wrap gap-2 mb-4"
