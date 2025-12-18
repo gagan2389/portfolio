@@ -203,15 +203,16 @@
         "liveLink": "https://northstartest.netlify.app/"
       },
       {
-        "title": "SIBA Global",
-        "description": "Built a website for the South Indian Business Awards to showcase events and highlight South India's business excellence.",
-        "imagePath": "https://placehold.co/600x400/FF7043/FFFFFF?text=SIBA+Global",
+        "title": "BookMaro",
+        "description": "Designed and developed the responsive website for BookMaro, a restaurant management and dining experience platform.",
+        "imagePath": "https://placehold.co/600x400/FF7043/FFFFFF?text=BookMaro",
         "technologies": [
           "React",
           "Tailwind CSS",
-          "PHP"
+          "Vite",
+          "Ant Design"
         ],
-        "liveLink": "http://siba.global/"
+        "liveLink": "http://bookmaro.com/"
       }
     ]
   },
@@ -222,5 +223,5 @@
     "phone": "+91 8247555493",
     "socialsText": "You can also find me on these platforms:"
   },
-  "cvPath": "https://drive.google.com/file/d/1Ak_3x6kxJtvfAulUNkbCt60iwgA7SCXV/view?usp=sharing"
+  "cvPath": "https://drive.google.com/file/d/1ErYuNzhHZQrIe4n5E089O9kuI3Wwy6pd/view?usp=sharing"
 }
