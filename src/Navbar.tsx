@@ -59,6 +59,7 @@ const Navbar: React.FC = () => {
 
           <motion.a
             href={cvPath}
+            target="_blank"
             download
             className="
                     hidden md:block
