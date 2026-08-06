@@ -1,25 +1,19 @@
-import React from 'react';
-import { ThemeProvider } from './ThemeContext';
-import Navbar from './Navbar';
-import HomeSection from './HomeSection';
-import AboutSection from './AboutSection';
-import SkillSection from './SkillSection';
-import ExperienceSection from './ExperienceSection';
-import WorkSection from './WorkSection';
-import ContactSection from './ContactSection';
+import { useState } from 'react';
+import { BootScreen } from './components/BootScreen';
+import { DesktopView } from './components/desktop/DesktopView';
+import { MobileView } from './components/mobile/MobileView';
+import { WallpaperProvider } from './context/WallpaperContext';
 
-const App: React.FC = () => {
+function App() {
+  const [booting, setBooting] = useState(true);
+
   return (
-    <ThemeProvider>
-      <Navbar />
-      <HomeSection />
-      <AboutSection />
-      <SkillSection />
-      <ExperienceSection />
-      <WorkSection />
-      <ContactSection />
-    </ThemeProvider>
+    <WallpaperProvider>
+      {booting && <BootScreen onDone={() => setBooting(false)} />}
+      <DesktopView />
+      <MobileView />
+    </WallpaperProvider>
   );
-};
+}
 
 export default App;
