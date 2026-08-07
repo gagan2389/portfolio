@@ -5,6 +5,7 @@ import { WallpaperBackground } from '../WallpaperBackground';
 import { PhoneStatus } from './PhoneStatus';
 import { PhoneTitle } from './PhoneTitle';
 import { AppGrid } from './AppGrid';
+import { RecentActivityWidget } from './RecentActivityWidget';
 import { PhoneDock } from './PhoneDock';
 import { AppScreen } from './AppScreen';
 
@@ -35,6 +36,7 @@ export function MobileView() {
       <PhoneStatus />
       <PhoneTitle />
       <AppGrid onOpen={openApp} />
+      <RecentActivityWidget />
       <PhoneDock onOpen={openApp} />
       <AppScreen activeApp={activeApp} isOpen={isOpen} loading={loading} onClose={closeApp} />
     </div>

@@ -7,7 +7,7 @@ const BACKGROUNDS: Record<AppId, string> = {
   skills: 'linear-gradient(160deg,#2b2b31,#111114)',
   contact: 'linear-gradient(160deg,#e7d6ad,#c9a866)',
   experience: 'conic-gradient(from 200deg, #ff5f6d, #ffc371, #47cf73, #38b7ff, #a15bff, #ff5f6d)',
-  github: 'linear-gradient(160deg,#3a3a40,#18181b)',
+  github: '#fff',
   settings: 'linear-gradient(160deg,#9aa3ad,#6b7480)',
 };
 
@@ -41,7 +41,7 @@ export function AppIcon({ id }: { id: AppId }) {
       {id === 'skills' && <TerminalArrowIcon />}
       {id === 'contact' && <ContactsIcon />}
       {id === 'experience' && <PhotosIcon />}
-      {id === 'github' && <img src="/icons/github.png" alt="" className="app-icon-img" />}
+      {id === 'github' && <img src="/icons/github.png" alt="" className="app-icon-img app-icon-img-gh" />}
       {id === 'settings' && <SettingsGearIcon color="#fff" />}
     </div>
   );
