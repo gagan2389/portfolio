@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'dineq',
-    name: 'About Dineq',
+    name: 'Dineq',
     sub: 'FoodTech POS & Restaurant Management System',
     tags: ['QR Ordering', 'POS', 'Queue Mgmt', 'Inventory', 'Staff Mgmt'],
     bullets: [
