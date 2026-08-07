@@ -183,6 +183,53 @@ a {
   color: var(--text-soft);
   font-size: 13.5px;
 }
+.settings-heading {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+.settings-heading:not(:first-child) {
+  margin-top: 28px;
+}
+.mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.mode-option {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font: inherit;
+  color: var(--text-dark);
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+.mode-option:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 0, 0, 0.16);
+}
+.mode-option.active {
+  border-color: #2c6c9e;
+  background: rgba(44, 108, 158, 0.1);
+}
+.mode-option-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+.mode-option-desc {
+  font-size: 12px;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
 .wallpaper-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

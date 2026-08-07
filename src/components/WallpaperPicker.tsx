@@ -1,12 +1,34 @@
 import { WALLPAPERS } from '../data/wallpapers';
 import { useWallpaper } from '../context/WallpaperContext';
+import { useUIMode } from '../context/UIModeContext';
 
 export function WallpaperPicker() {
   const { wallpaper, setWallpaperId } = useWallpaper();
+  const { mode, setMode } = useUIMode();
 
   return (
     <div className="wallpaper-picker">
-      <p className="wallpaper-picker-lede">Choose a desktop background.</p>
+      <p className="wallpaper-picker-lede settings-heading">Appearance</p>
+      <div className="mode-toggle" role="group" aria-label="UI mode">
+        <button
+          type="button"
+          className={`mode-option${mode === 'mac' ? ' active' : ''}`}
+          onClick={() => setMode('mac')}
+        >
+          <span className="mode-option-title">🖥️ Mac Mode</span>
+          <span className="mode-option-desc">The full desktop experience — windows, dock, wallpapers.</span>
+        </button>
+        <button
+          type="button"
+          className={`mode-option${mode === 'simple' ? ' active' : ''}`}
+          onClick={() => setMode('simple')}
+        >
+          <span className="mode-option-title">📄 Simple Mode</span>
+          <span className="mode-option-desc">A plain, single-page resume layout. Lighter and faster.</span>
+        </button>
+      </div>
+
+      <p className="wallpaper-picker-lede settings-heading">Wallpaper</p>
       <div className="wallpaper-grid">
         {WALLPAPERS.map((w) => {
           const isActive = w.id === wallpaper.id;

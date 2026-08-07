@@ -32,7 +32,7 @@ export function WindowLayer() {
         <ResumeWindowContent id="resume" />
       </Window>
 
-      <Window id="settings" title="Wallpaper" wide>
+      <Window id="settings" title="Settings" wide>
         <WallpaperPicker />
       </Window>
     </div>
