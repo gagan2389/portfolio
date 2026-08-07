@@ -26,13 +26,18 @@ body,
 #root {
   height: 100%;
 }
+html {
+  overscroll-behavior: none;
+}
 body {
   margin: 0;
   font-family: var(--sans);
   color: var(--text-dark);
   overflow: hidden;
+  overscroll-behavior: none;
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   position: fixed;
   inset: 0;
   -webkit-font-smoothing: antialiased;
@@ -1008,12 +1013,94 @@ a {
 .app-grid {
   position: relative;
   z-index: 20;
-  flex: 1;
+  flex: 0 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 22px 14px;
   padding: 34px 22px;
   align-content: start;
+}
+.activity-widget-wrap {
+  position: relative;
+  z-index: 15;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6px 22px 10px;
+  overflow: hidden;
+}
+.activity-widget {
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(18, 19, 23, 0.42);
+  backdrop-filter: blur(26px) saturate(1.6);
+  -webkit-backdrop-filter: blur(26px) saturate(1.6);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+  padding: 16px 16px 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: activity-widget-in 0.5s ease 0.15s forwards;
+}
+.activity-widget-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.activity-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+}
+.activity-icon {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.activity-text {
+  min-width: 0;
+}
+.activity-title {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.activity-meta {
+  margin: 2px 0 0;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.activity-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+@keyframes activity-widget-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .activity-widget {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 .app {
   display: flex;
@@ -1048,6 +1135,10 @@ a {
   height: 62%;
   object-fit: contain;
   display: block;
+}
+.app-icon-img-gh {
+  width: 82%;
+  height: 82%;
 }
 .app span {
   color: #fff;

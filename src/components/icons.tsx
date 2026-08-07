@@ -12,6 +12,32 @@ export function GearIcon({ color = 'currentColor', size = 15 }: IconProps) {
   );
 }
 
+export function CommitNodeIcon({ color = 'currentColor', size = 16 }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round">
+      <path d="M2 12h6M16 12h6" />
+      <circle cx="12" cy="12" r="3.5" />
+    </svg>
+  );
+}
+
+export function CodeBracketsIcon({ color = 'currentColor', size = 16 }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 6l-5 6 5 6M15 6l5 6-5 6" />
+    </svg>
+  );
+}
+
+export function DocumentIcon({ color = 'currentColor', size = 16 }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke={color} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 3h9l4 4v14a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z" />
+      <path d="M9 12h7M9 16h7M9 8h3" />
+    </svg>
+  );
+}
+
 export function WifiIcon({ color = 'currentColor', size = 15 }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke={color} strokeWidth="2">
