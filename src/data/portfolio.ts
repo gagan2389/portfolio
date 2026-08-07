@@ -50,6 +50,29 @@ export const PROJECTS: Project[] = [
       'Measurable impact: operations streamlined by up to 70%, with 95% customer satisfaction.',
     ],
   },
+  {
+    id: 'optron',
+    name: 'Optron Industries',
+    sub: 'Corporate website · Product showcase',
+    tags: ['Responsive Website'],
+    bullets: ['Built a responsive website for Optron Industries to showcase products and boost brand visibility.'],
+  },
+  {
+    id: 'oneinflu',
+    name: 'OneInflu',
+    sub: 'Influencer marketing platform · Brands × Creators',
+    tags: ['Responsive Website'],
+    bullets: ['Created a responsive website for an influencer marketing platform connecting brands and creators.'],
+  },
+  {
+    id: 'northstar',
+    name: 'NorthStar',
+    sub: 'NorthStar Academy · CMA (USA) programs',
+    tags: ['Responsive Website'],
+    bullets: [
+      'Built a responsive website for NorthStar Academy to promote CMA (USA) programs and drive lead conversions.',
+    ],
+  },
 ];
 
 export const SKILLS: SkillCategory[] = [
