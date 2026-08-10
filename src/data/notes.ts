@@ -5,6 +5,10 @@ export interface NavNote {
 
 export const NAV_NOTES: NavNote[] = [
   {
+    title: 'Prefer a simple page?',
+    body: 'Open Settings (gear icon) and switch to Simple Mode for a plain, single-page resume layout.',
+  },
+  {
     title: 'Open a project',
     body: 'Double-click any folder on the desktop to read its case study.',
   },

@@ -30,6 +30,7 @@ export function BootScreen({ onDone }: { onDone: () => void }) {
       <div className="boot-bar-track">
         <div className="boot-bar-fill" style={{ animationDuration: `${FILL_MS}ms` }} />
       </div>
+      <p className="boot-text">Loading portfolio...</p>
     </div>
   );
 }
