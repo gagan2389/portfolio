@@ -1,5 +1,6 @@
 import { PROJECTS } from '../../data/portfolio';
 import { Window } from './Window';
+import { AllProjectsWindowContent } from './windows/AllProjectsWindowContent';
 import { ProjectWindowContent } from './windows/ProjectWindowContent';
 import { TerminalWindowContent } from './windows/TerminalWindowContent';
 import { ContactWindowContent } from './windows/ContactWindowContent';
@@ -10,6 +11,10 @@ import { WallpaperPicker } from '../WallpaperPicker';
 export function WindowLayer() {
   return (
     <div className="window-layer">
+      <Window id="projects" title="Projects" wide>
+        <AllProjectsWindowContent />
+      </Window>
+
       {PROJECTS.map((project) => (
         <Window key={project.id} id={`project-${project.id}`} title={project.name}>
           <ProjectWindowContent project={project} />

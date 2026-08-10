@@ -50,13 +50,13 @@ export function Dock() {
             <SettingsGearIcon color="#fff" />
           </div>
         </button>
-        <div className="dock-sep" />
-        <button type="button" className="dock-item">
+        {/* <div className="dock-sep" /> */}
+        {/* <button type="button" className="dock-item">
           <div className="tooltip">Bin</div>
           <div className="icon ic-trash">
             <TrashIcon />
           </div>
-        </button>
+        </button> */}
       </div>
     </div>
   );

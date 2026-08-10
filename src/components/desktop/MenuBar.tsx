@@ -1,5 +1,4 @@
 import { useDesktopClock } from '../../hooks/useClock';
-import { PROJECTS } from '../../data/portfolio';
 import { useWindows } from '../../context/WindowsContext';
 import { BatteryIcon, GearIcon, SearchIcon, WifiIcon } from '../icons';
 
@@ -13,7 +12,7 @@ export function MenuBar() {
         &#63743;
       </span>
       <span className="brand">Gagan's Portfolio</span>
-      <button type="button" className="menu-item" onClick={() => openWindow(`project-${PROJECTS[0].id}`)}>
+      <button type="button" className="menu-item" onClick={() => openWindow('projects')}>
         Projects
       </button>
       <button type="button" className="menu-item" onClick={() => openWindow('contact')}>

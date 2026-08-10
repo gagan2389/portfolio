@@ -9,7 +9,7 @@ export function TerminalWindowContent() {
         <b>gagan@portfolio</b> % show tech stack
       </div>
       {SKILLS.map((s) => (
-        <div key={s.cat}>
+        <div className="term-group" key={s.cat}>
           <div className="term-cat">{s.cat}</div>
           <div className="term-chip-row">
             {s.items.map((item) => (
