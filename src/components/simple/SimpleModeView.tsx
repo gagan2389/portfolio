@@ -388,10 +388,6 @@ export function SimpleModeView() {
               CONTACT
             </motion.div>
           </div>
-          <footer className="foot">
-            <span>DOC-GG-2026 · REV C</span>
-            <span>Ahmedabad, Gujarat, IN</span>
-          </footer>
         </div>
       </section>
       </div>
