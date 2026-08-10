@@ -1,6 +1,6 @@
 import { CONTACT } from '../../data/portfolio';
 import { useWindows } from '../../context/WindowsContext';
-import { ContactsIcon, ResumeDocIcon, SettingsGearIcon, TerminalArrowIcon, TrashIcon } from '../icons';
+import { ContactsIcon, ResumeDocIcon, SettingsGearIcon, TerminalArrowIcon } from '../icons';
 
 export function Dock() {
   const { openWindow } = useWindows();
