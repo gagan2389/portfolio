@@ -1,118 +1,127 @@
-import type { ContactInfo, EducationItem, ExperienceItem, Project, SkillCategory } from './types';
-
-export const PROJECTS: Project[] = [
-  {
-    id: 'prehoto',
-    name: 'PreHOTO — HOTO Module',
-    sub: 'Plant-commissioning platform · Adani Green Energy · CCTECH',
-    tags: ['React 19', 'TypeScript (strict)', 'Vite 6', 'Tailwind CSS v4', 'shadcn/ui'],
-    bullets: [
-      'Built the complete Handover/Takeover (HOTO) module end-to-end — inspection checklists, punch-point resolution, multi-role approvals and work-area-based access control.',
-      'Built an Excel/CSV bulk-import pipeline (ExcelJS + Web Worker) for punch-point checklists.',
-      'Extended the Pre-Commissioning Clearance (PCC) flow into HOTO: PCC-CFT checklist section, O&M approve/resend actions, a remarks timeline, and work-area-based PCC resolution.',
-      'Shipped ~70 PRs across a 20+ engineer monorepo.',
-    ],
-  },
-  {
-    id: 'los',
-    name: 'Loan Origination System (LOS)',
-    sub: 'Aumnee · Financial institutions',
-    tags: ['React', 'Ant Design', 'Vite', 'Tailwind CSS', 'RTK Query'],
-    bullets: [
-      'Owned the end-to-end development of a Loan Origination System, leading a team of 3 developers.',
-      'Drove an 80% increase in monthly loan disbursements for clients.',
-      'Built with React, Ant Design, Vite, Tailwind CSS and RTK Query.',
-    ],
-  },
-  {
-    id: 'marvin',
-    name: 'Marvin — Co-Lending Platform',
-    sub: 'Aumnee · Omni UI · Banks × NBFCs',
-    tags: ['React', 'Ant Design', 'i18next', 'JSON Schema'],
-    bullets: [
-      'Co-lending platform enabling collaboration between banks and NBFCs.',
-      'Developed key modules: LMS Config, LOS Config, Rules Management, Collections & Repayments, POS Error UI.',
-      'Integrated i18next and a JSON Schema Viewer to enhance localization and schema visualisation.',
-    ],
-  },
-  {
-    id: 'dineq',
-    name: 'Dineq',
-    sub: 'FoodTech POS & Restaurant Management System',
-    tags: ['QR Ordering', 'POS', 'Queue Mgmt', 'Inventory', 'Staff Mgmt'],
-    bullets: [
-      'Self-service restaurant platform covering QR ordering, queue management, POS, inventory, staff scheduling and valet — end to end, for a seamless dine-in experience.',
-      'QR Menu: touchless, dynamic digital menu with real-time pricing/availability, plus integrated in-menu ordering and payments.',
-      'Queue Management: smart waitlist with guest notifications to cut wait times and improve seating efficiency.',
-      'Order Management: unified, automated tracking for dine-in, takeaway and delivery from placement to delivery.',
-      'POS Management: fast, error-free billing with digital payments and automated receipts.',
-      'Inventory & Staff Management: real-time stock tracking with reorder alerts, plus automated scheduling and performance tracking.',
-      'Measurable impact: operations streamlined by up to 70%, with 95% customer satisfaction.',
-    ],
-  },
-  {
-    id: 'optron',
-    name: 'Optron Industries',
-    sub: 'Corporate website · Product showcase',
-    tags: ['Responsive Website'],
-    bullets: ['Built a responsive website for Optron Industries to showcase products and boost brand visibility.'],
-  },
-  {
-    id: 'oneinflu',
-    name: 'OneInflu',
-    sub: 'Influencer marketing platform · Brands × Creators',
-    tags: ['Responsive Website'],
-    bullets: ['Created a responsive website for an influencer marketing platform connecting brands and creators.'],
-  },
-  {
-    id: 'northstar',
-    name: 'NorthStar',
-    sub: 'NorthStar Academy · CMA (USA) programs',
-    tags: ['Responsive Website'],
-    bullets: [
-      'Built a responsive website for NorthStar Academy to promote CMA (USA) programs and drive lead conversions.',
-    ],
-  },
-];
-
-export const SKILLS: SkillCategory[] = [
-  { cat: 'Languages', items: ['TypeScript', 'JavaScript', 'HTML', 'CSS', 'XML', 'PHP', 'Java'] },
-  { cat: 'Frameworks & Libraries', items: ['React', 'Ant Design', 'MUI', 'Tailwind CSS', 'Angular', 'Bootstrap', 'Chart.js', 'NestJS'] },
-  { cat: 'Tools', items: ['GitHub', 'Vite', 'Nx', 'Figma', 'Npm'] },
-  { cat: 'AI Tools', items: ['Cursor', 'Antigravity', 'Trae', 'GitHub Copilot', 'Stitch', 'Claude Code', 'OpenAI Codex', 'ChatGPT', 'Windsurf'] },
-];
-
-export const EXPERIENCE: ExperienceItem[] = [
-  {
-    role: 'Member of Technical Staff',
-    org: 'CCTECH',
-    meta: '04/2026 – Present · Ahmedabad, Gujarat',
-    body: 'Building the HOTO module on PreHOTO, a plant-commissioning platform for Adani Green Energy, plus supporting NestJS backend changes.',
-  },
-  {
-    role: 'Software Engineer 1',
-    org: 'Aumnee',
-    meta: '12/2024 – 01/2026 · Bengaluru, Karnataka',
-    body: 'Led a 3-person team on a Loan Origination System, and built a config-driven form engine and 60+ component design system.',
-  },
-  {
-    role: 'Software Developer Intern',
-    org: 'Aumnee',
-    meta: '06/2024 – 12/2024 · Bengaluru, Karnataka',
-    body: 'Built responsive React/Ant Design interfaces for Omni UI and Marvin, a bank × NBFC co-lending platform.',
-  },
-];
-
-export const EDUCATION: EducationItem[] = [
-  { school: 'Vellore Institute of Technology', degree: 'B.Tech, Computer Science & Engineering', years: '2020 – 2024' },
-  { school: 'Sri Chaitanya Junior College', degree: 'Class XII', years: '2018 – 2020' },
-];
-
-export const CONTACT: ContactInfo = {
+export const PROFILE = {
   name: 'Gagan Gupta',
+  first: 'Gagan',
   role: 'Front-End Developer',
-  msg: "Got an idea? A bug to squash? Or just wanna talk tech? I'm in.",
+  location: 'Ahmedabad, India',
   email: 'gupta.gagan2002@gmail.com',
-  phone: '+91 8247555493',
-  github: 'gagan2389',
+  github: 'https://github.com/gagan2389',
+  linkedin: 'https://www.linkedin.com/in/gagangupta06',
+  site: 'https://gagangupta.site',
+  resume: '/Gagan_Gupta_Resume.pdf',
 };
+
+export const BRANDS = ['CCTech', 'Aumnee', 'Adani Enterprises', 'Createlab', 'Dineq', 'ChaiKhata', 'StockPilot', 'Tirumala Tech'];
+
+export const SKILL_PILLS: { label: string; logo?: string; color: string; glyph?: string }[] = [
+  { label: 'React', logo: 'react', color: '#087EA4' },
+  { label: 'TypeScript', logo: 'typescript', color: '#3178C6' },
+  { label: 'Tailwind CSS', logo: 'tailwindcss', color: '#0891B2' },
+  { label: 'Ant Design', logo: 'antdesign', color: '#1677FF' },
+  { label: 'shadcn/ui', logo: 'shadcnui', color: '#101210' },
+  { label: 'Form Engines', color: '#7FB81C', glyph: '{ }' },
+  { label: 'Component Libraries', color: '#7FB81C', glyph: '◧' },
+  { label: 'NestJS', logo: 'nestjs', color: '#E0234E' },
+  { label: 'Claude Code', logo: 'claude', color: '#D97757' },
+];
+
+export const SKILL_GROUPS = [
+  { cat: 'Core', items: 'React, TypeScript, JavaScript, HTML/CSS, Tailwind CSS, shadcn/ui, Ant Design, Bootstrap, Claude, GitHub' },
+  { cat: 'Libraries & tooling', items: 'Ant Design, RTK Query, Vite, Git/GitHub' },
+  { cat: 'Also used', items: 'NestJS, Node.js, Next.js, React Native, MUI, Angular, Nx, Figma, Java' },
+  { cat: 'AI tools', items: 'Claude Code, Cursor, GitHub Copilot, OpenAI Codex, Antigravity, Trae, Stitch, Windsurf, ChatGPT' },
+];
+
+export const STEPS = [
+  { n: '01', title: 'Understand', body: 'Sit with the people who use the product, gather requirements and learn the real pain points.' },
+  { n: '02', title: 'Prototype', body: 'A working demo UI fast: first HTML demo from a PRD in half a day, full version in about a day and a half.' },
+  { n: '03', title: 'Ship', body: 'Production React and TypeScript with reusable components, schema-driven forms and clean PRs.' },
+];
+
+export const CREDS = [
+  {
+    quote: 'Finalist, Google Cloud Agentic AI Day, recognised for building with agentic AI.',
+    av: 'G',
+    by: 'Finalist',
+    org: 'Google Cloud Agentic AI Day',
+  },
+  {
+    quote: 'Certificate of Recognition (Technical Lead), plus MATLAB, Android Studio and Object-Oriented Java training.',
+    av: 'C',
+    by: 'Certificate of Recognition',
+    org: 'Technical Lead · Training courses',
+  },
+];
+
+export interface Work {
+  title: string;
+  desc: string;
+  tags: string[];
+  href?: string;
+  cursor: string;
+}
+
+export const WORKS: Work[] = [
+  {
+    title: 'HOTO · Handover/Takeover',
+    desc: 'Plant-commissioning platform for a large renewable-energy company: inspection checklists, punch-point resolution, multi-role approvals and work-area access control. ~228 PRs shipped at CCTech.',
+    tags: ['React', 'TypeScript', 'Tailwind', 'shadcn/ui'],
+    cursor: 'Case',
+  },
+  {
+    title: 'Loan Origination & Management',
+    desc: 'LOS and LMS for financial institutions. Led 3 developers, plus a config-driven form engine (500+ fields) and a 60+ component library.',
+    tags: ['React', 'Ant Design', 'RTK Query', 'AJV'],
+    cursor: 'Case',
+  },
+  {
+    title: 'Dineq',
+    desc: 'Dine-in app for Android, iOS and web: QR menu, table booking, ordering, waiter call and live queue.',
+    tags: ['React Native', 'Cloudflare', 'Twilio OTP'],
+    href: 'https://dineq.in',
+    cursor: 'View',
+  },
+  {
+    title: 'StockPilot',
+    desc: 'Multi-tenant inventory management PWA where each business manages its own stock.',
+    tags: ['React', 'TypeScript', 'Vite', 'Supabase'],
+    href: 'https://stockpilot.createlab.in',
+    cursor: 'View',
+  },
+  {
+    title: 'Tirumala Tech',
+    desc: 'Interactive 3D scroll-based website for an earthing and lightning arrestor company.',
+    tags: ['React', 'React Three Fiber'],
+    href: 'https://v2.tirumalatech.in/',
+    cursor: 'View',
+  },
+  {
+    title: 'ChaiKhata',
+    desc: 'PWA for chai businesses to track customer credit and daily orders.',
+    tags: ['React', 'Supabase'],
+    href: 'https://chaikhata.createlab.in',
+    cursor: 'View',
+  },
+  {
+    title: 'Optron Industries',
+    desc: 'Corporate website with product catalog, services and a business inquiry flow.',
+    tags: ['Website', 'Inquiry flow'],
+    href: 'https://optronindustries.com',
+    cursor: 'View',
+  },
+  {
+    title: 'Createlab',
+    desc: 'Digital agency I run, building websites, mobile apps and custom software for startups.',
+    tags: ['Agency', 'Web', 'Mobile'],
+    href: 'https://createlab.in',
+    cursor: 'View',
+  },
+];
+
+export const EXPERIENCE = [
+  { role: 'Forward Deployed Engineer', co: 'CCTech', yr: '08/2026 → Now' },
+  { role: 'Member of Technical Staff', co: 'CCTech', yr: '04/2026 → 08/2026' },
+  { role: 'Software Engineer', co: 'Aumnee', yr: '12/2024 → 01/2026' },
+  { role: 'Software Engineer Intern', co: 'Aumnee', yr: '06/2024 → 12/2024' },
+  { role: 'Web Development Intern', co: 'Adani Enterprises', yr: '07/2023 → 08/2023' },
+  { role: 'B.Tech · Computer Science', co: 'VIT-AP University', yr: '2020 → 2024' },
+];
