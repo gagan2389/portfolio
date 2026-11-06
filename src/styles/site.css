@@ -398,3 +398,12 @@ html{scroll-padding-top:24px}
 .menu.open span:nth-child(2){transform:rotate(-45deg)}
 .cur-on .cur-dot.hide,.cur-on .cur-ring.hide{opacity:0}
 .has-cur .menu,.has-cur .menu *{cursor:pointer}
+@media(max-width:760px){
+  .hero-left .proof{order:1}
+  .hero-left .avail{order:2}
+  .hero-portrait{margin-top:20px}
+  .hero-bottom{margin-top:0}
+}
+@media(max-width:760px){.hero-portrait{margin-top:-12px}}
+@media(max-width:760px){.hero-portrait{margin-top:-34px}}
+@media(max-width:820px){.process .dash{display:none}}
