@@ -407,3 +407,9 @@ html{scroll-padding-top:24px}
 @media(max-width:760px){.hero-portrait{margin-top:-12px}}
 @media(max-width:760px){.hero-portrait{margin-top:-34px}}
 @media(max-width:820px){.process .dash{display:none}}
+@media(max-width:520px){
+  .xp .row{grid-template-columns:1fr auto;column-gap:12px;row-gap:2px;align-items:center}
+  .xp .row .role{grid-column:1;grid-row:1}
+  .xp .row .co{display:block;grid-column:1;grid-row:2;font-size:13.5px}
+  .xp .row .yr{grid-column:2;grid-row:1 / span 2;align-self:center;font-size:14px}
+}
